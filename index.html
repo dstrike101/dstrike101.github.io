@@ -3,22 +3,56 @@
 <head>
 	
 	<title></title>
+
+	<style type="text/css">
+		#menu{
+			width: 100%;
+			height: 100px;
+			background-color: skyblue;
+		}
+
+		body{
+			margin: 0px;
+		}
+
+		.button{
+			width: 33%;
+			height: 100px;
+			display: inline-block;
+			font-size: 40px;
+			text-align: center;
+			
+		}
+
+
+		.button:hover{
+			transition: 2s;
+			background-color: black;
+		}
+
+		#box{
+			width: 100%;
+			height: 4900px;
+			background-image: url(https://coolmaterial.com/wp-content/uploads/2013/02/spiral.gif);
+		}
+		body{
+			margin: 0px;
+		}
+	</style>
+
 </head>
 <body>
 
-<a href="journal.html">
- journale
-</a>
 
-<br> 
-<wbr>
-<br>
-<wbr>
-<br>
 
-<a href="projects.html">
-	projects
-</a>
+ <div id=menu>
+ 	<a href="journal.html">
+ 	<div class="button"> journal</div></a>
+ 	<a href="projects.html">
+ 	<div class="button"> projects</div></a>
+ 	<div class="button"> smth else</div>
+ 	<div id="box"></div>
+ </div>
 
 </body>
 </html>
