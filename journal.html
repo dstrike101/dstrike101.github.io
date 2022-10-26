@@ -12,7 +12,88 @@
 	<title></title>
 
 	<style type="text/css">
-		
+		#crypto{
+			width: 75px;
+			height: 75px;
+			background-color: mediumslateblue;
+			position: relative;
+			left: 0%;
+			animation-name: jiggle;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes jiggle{
+			0%{
+				top: 232px;
+				left: 20px;
+			}
+			20%{
+				top: 232px;
+				left: 100px;
+			}
+			40%{
+				top: 232px;
+				left: 362px;
+			}
+			60%{
+				top: 232px;
+				left: 584px;
+			}
+			80%{
+				top: 232px;
+				left: 718px;
+			}
+			99.99%{
+				top: 232px;
+				left: 20px;
+			}
+
+			
+		}
+
+		.dot{
+			width: 20px;
+			height: 20px;
+			background-color: black;
+			border-radius: 50%;
+			display: inline-block;
+			position: absolute;
+			left: 0%;
+			animation-name: circle;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			z-index: 9;
+		}
+
+
+
+		@keyframes circle{
+			0%{
+				top: 20px;
+				left: 20px;
+			}
+			20%{
+				top: 20px;
+				left: 100px;
+
+			}
+			40%{
+				top: 20px;
+				left: 362px;
+			}
+			60%{
+				top: 20px;
+				left: 584px;
+			}
+			80%{
+				top: 20px;
+				left: 718px;
+			}
+			99.99%{
+				top: 20px;
+				left: 20px;
+			}
 
 			}
 		}
@@ -88,6 +169,8 @@
 			font-family: 'Dancing Script';
 			font-size: 25px;
 		}
+
+
 		
 	</style>
 
@@ -95,11 +178,24 @@
 
 <br>
 
+<a href="j4.html">
+	<center>journal entry 4</center>
+	<style type="text/css">
+		a{
+			font-family: 'Dancing Script';
+			font-size: 25px;
+		}
+	</style>
+
+</a>
+<br>
+
 <a href="index.html">
 	<center>go back</center>
 	<style type="text/css">
 		{
-			font-size: 10px;
+			font-family: Arial;
+			font-size: 5px;
 		}
 	</style>
 </a>
