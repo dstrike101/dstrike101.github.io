@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#punny{
+			width: 100px;
+			height: 100px;
+			position: fixed;
+			top: 43%;
+			left: 43%;
+			background-color: magenta;
+		}
+	</style>
+
+</head>
+<body>
+<script type="text/javascript">
+	var breaker = false;
+	audio = new Audio('kukulkan.mp3')
+	punny.addEventListener("click",
+		function(event){
+			if (breaker == false){
+				breaker = true;
+				punny.backgroundImage = "url(mbaku.jpeg)"
+				audio.play()
+			}
+			
+			if (breaker == true){
+				breaker = false;
+				punny.backgroundColor = "red" 
+				audio.pause()
+			}
+		}
+		)
+</script>
+
+<div id=punny>
+	
+</div>
+
+</body>
+</html>
