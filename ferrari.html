@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		
+
+		#buggy{
+			width:200px;
+			height:200px;
+			left:10px;
+			position:absolute; 
+			background-image: url(car.png);
+			background-size: contain;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="buggy"></div>
+
+	<script type="text/javascript">
+		buggy.style.left = "0px";
+		buggy.style.top = "0px";
+		buggy.style.width = "200px";
+		buggy.style.height = "200px";
+// setting the position for the left of the div
+		 var x = parseInt(buggy.style.left); //google says that this takes the string and assigns it a numerical value
+		 var y = parseInt(buggy.style.width);
+
+		document.addEventListener("keydown", function(event){
+			console.log(x)
+			console.log(y)
+			
+			if(event.keyCode == 39){
+				x = x+10
+				buggy.style.backgroundImage = "url(car.png)"
+				// this makes the car face to the left
+				buggy.style.left = x +"px";
+				// this says that whenever the right arrow is pressed, the car will move ten pixels to the right
+			}
+
+			else if(event.keyCode == 37){
+				x = x-10
+				buggy.style.backgroundImage = "url(car2.png)"
+				//this makes the car face to the right
+				buggy.style.left = x +"px";
+				// whenever the left arrow is pressed, the car will move ten pixels to the left\
+			}
+			
+			else if(event.keyCode == 38){
+				x = x-10
+				y = y-20
+				buggy.style.top = x +"px"
+				buggy.style.width = y +"px"
+				buggy.style.height = y +"px"
+				buggy.style.backgroundImage = "url(carback.png)"
+				buggy.style.backgroundRepeat = "no-repeat"
+			}
+
+			else if(event.keyCode == 40){
+				x = x+10
+				y = y+20
+				buggy.style.top = x +"px"
+				buggy.style.width = y +"px"
+				buggy.style.height = y +"px"
+				buggy.style.backgroundImage = "url(carfront.png)"
+				buggy.style.backgroundRepeat = "no-repeat"
+			}
+
+		})
+
+
+	</script>
+
+</body>
+</html>

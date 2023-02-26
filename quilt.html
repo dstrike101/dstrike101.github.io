@@ -26,7 +26,7 @@
 
 <br><br>
 
-<p> <center>BEHOLD! MY STUFF!!</center><p>
+<p> To see the code for this page, right click and choose "view page source" <p>
 
 
 <script type="text/javascript">
@@ -59,7 +59,14 @@
     for (var i = 0; i < 15; i++) 
     { makeSquare(i);}
 
-    
+    var breaker = false;
+    square.addEventListener("click",
+        function(event){
+            if (breaker == false){
+                breaker = true;
+                smth.style.height = "400px"
+                smth.style.width = "400px"
+                smth.style.backgroundImage = "url("
 </script>
 
 </body>

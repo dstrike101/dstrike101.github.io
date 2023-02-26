@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Valentine's Day, Mom!</title>
+    <style>
+      body {
+        background-color: #ffebf2;
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+      }
+      
+      h1 {
+        color: #d81b60;
+        margin-top: 50px;
+      }
+      
+      #message {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #333;
+      }
+      
+      #love-button {
+        background-color: #d81b60;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Happy Valentine's Day, Mom!</h1>
+    <div id="message">Thank you for always being there for me and showing me unconditional love.</div>
+    <button id="love-button">Click me to send some love to Mom!</button>
+    <script>
+      const messageDiv = document.getElementById("message");
+      const loveButton = document.getElementById("love-button");
+      
+      loveButton.addEventListener("click", function() {
+        messageDiv.innerHTML = "I love you so much, Mom!";
+        loveButton.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

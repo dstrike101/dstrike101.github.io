@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#photo{
+			width:500px;
+			height: 500px;
+/*			filter: hue-rotate(90deg);*/
+		}
+	</style>
+
+	
+
+</head>
+<body>
+
+	<img src="1999.jpeg" id=photo>
+		
+<script type="text/javascript">
+		photo.addEventListener("mousemove", function(event){
+			photo.style.filter = "hue-rotate("+event.clientX+"deg)";
+			photo.style.filter = "drop-shadow("+event.clientX+ "px" + event.clientY+ "px";
+
+			})
+		
+	</script>
+</body>
+</html>

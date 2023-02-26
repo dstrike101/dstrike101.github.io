@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#card {
+  width: 400px;
+  height: 300px;
+  background-color: pink;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#greeting {
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: greet 5s ease-in-out infinite alternate;
+}
+
+@keyframes greet {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#message {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+#signature {
+  font-size: 18px;
+  font-style: italic;
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+	</style>
+</head>
+<body>
+
+	<div id="card">
+  <div id="greeting">Happy Valentine's Day!</div>
+  <div id="message">I love you more than words can say.</div>
+  <div id="signature">Love, <br>    David</div>
+  <button id="toggleButton">Toggle Animation</button>
+</div>
+
+
+<script type="text/javascript">
+	const greeting = document.querySelector("#greeting");
+const toggleButton = document.querySelector("#toggleButton");
+
+toggleButton.addEventListener("click", function () {
+  if (greeting.style.animationPlayState === "paused") {
+    greeting.style.animationPlayState = "running";
+    toggleButton.textContent = "Pause Animation";
+  } else {
+    greeting.style.animationPlayState = "paused";
+    toggleButton.textContent = "Start Animation";
+  }
+});
+</script>
+
+</body>
+</html>
