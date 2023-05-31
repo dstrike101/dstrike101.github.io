@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box {
+  		width: 50px;
+ 		height: 50px;
+ 		background-color: red;
+  		position: absolute;
+  		top: 0;
+ 		left: 0;
+    margin-left: 500px;
+    transition: transform 0.2s ease-in-out;
+}
+
+  .rectangle{
+    width: 50px;
+    height: 20px;
+    background-color: black;
+    position: sticky;
+  }
+	</style>
+
+</head>
+<body>
+<div id="box"></div>
+<div class="rectangle"></div>
+<script type="text/javascript">
+	var box = document.getElementById("box");
+var gravity = .5;
+var velocity = 0;
+
+function jump() {
+  velocity = -10;
+}
+
+function update() {
+  velocity += gravity;
+  box.style.top = box.offsetTop + velocity + "px";
+  if (box.offsetTop > window.innerHeight - box.offsetHeight) {
+    box.style.top = window.innerHeight - box.offsetHeight + "px";
+    velocity = 0;
+  }
+  requestAnimationFrame(update);
+}
+
+update();
+
+document.body.addEventListener("keydown", function (event) {
+  if (event.code === "Space") {
+    jump();
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.code === "ArrowLeft") {
+    moveBox("left");
+  } else if (event.code === "ArrowRight") {
+    moveBox("right");
+  }
+});
+
+document.addEventListener("keyup", function(event) {
+  if (event.code === "ArrowLeft" || event.code === "ArrowRight") {
+    stopBox();
+  }
+});
+
+let moveInterval;
+const moveStep = 5;
+let moveDirection = "";
+
+function moveBox(direction) {
+  if (moveDirection === direction) {
+    return;
+  }
+  
+  moveDirection = direction;
+  moveInterval = setInterval(function() {
+    let boxPosX = parseInt(box.style.left) || 0;
+  
+    if (direction === "left") {
+      boxPosX -= moveStep;
+    } else if (direction === "right") {
+      boxPosX += moveStep;
+    }
+  
+    box.style.left = boxPosX + "px";
+  }, 10);
+}
+
+function stopBox() {
+  clearInterval(moveInterval);
+  moveDirection = "";
+}
+
+
+document.addEventListener('click', function makeRectangle(event){
+  var rectangle = document.createElement('div');
+  rectangle.classList.add("rectangle");
+  rectangle.style.position = "absolute";
+  document.body.appendChild(rectangle);
+  rectangle.style.left = event.clientX + "px";
+  rectangle.style.top = event.clientY + "px";
+  });
+
+</script>
+
+
+
+</body>
+</html>

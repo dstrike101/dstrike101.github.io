@@ -69,6 +69,16 @@
 				buggy.style.backgroundRepeat = "no-repeat"
 			}
 
+			else if(event.keyCode == 16){
+				buggy.style.backgroundImage = "url(lamboright.png)"
+				buggy.style.backgroundRepeat = "no-repeat"
+				if(event.keycode == 39){
+					x = x+10
+					buggy.style.backgroundImage = "url(lamboright.png)"
+					buggy.style.left = x + "px";
+				}
+			}
+
 		})
 
 

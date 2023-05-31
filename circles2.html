@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Randomly Colored Squares</title>
+    <style>
+      .square {
+        position: absolute;
+        border: 1px solid black;
+        border-radius: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener('mousemove', function(event) {
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+        
+        // color
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+        var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        
+        var size = Math.floor(Math.random() * 46) + 5; /s/s/s/s/s/s/s/
+        
+        //size
+        var square = document.createElement('div');
+        square.classList.add('square');
+        square.style.left = mouseX + 'px';
+        square.style.top = mouseY + 'px';
+        square.style.width = size + 'px';
+        square.style.height = size + 'px';
+        square.style.backgroundColor = color;
+        
+        document.body.appendChild(square);
+      });
+    </script>
+  </body>
+</html>
